@@ -13,3 +13,11 @@
 .App-title {
   font-size: 1.5em;
 }
+
+.feather-x {
+  stroke:#999;
+  width: 100%;
+}
+.feather-x:hover {
+  stroke: black;
+}

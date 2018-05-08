@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import List from './list';
+import AddList from './addList';
 import './board.css';
 
 class BoardBody extends Component {
   constructor(props){
     super(props);
     this.addList = this.addList.bind(this);
-    this.showFOrm = this.showForm.bind(this);
+    this.showForm = this.showForm.bind(this);
+    this.cancelList = this.cancelList.bind(this);
     this.state = {
-      lists: []
+      lists: [],
+      newList: false
     }
   }
   /** @function addList
@@ -19,27 +23,48 @@ class BoardBody extends Component {
    */
   addList(title) {
     this.setState((prevState) => {
-      lists: prevState.lists.concat({
-        title: title,
-        cards: []
-      })
+      return {
+        lists: prevState.lists.concat(title)
+      };  
     });
   }
+  /**
+   * 
+   * @param {boolean} value - receives the value from the AddList component to 
+   * change state item newList back to false.
+   */
+  cancelList(value) {
+    this.setState({newList: value});
+  }
+  /** @function showForm
+   * This function toggles the newList state variable.
+   * @param {boolean} newList - Controls the visibility of the new list form.
+   */
   showForm() {
-    alert('Show Form');
+    this.setState(prevState => ({
+      newList: !prevState.newList
+    }));
   }
   render() {
     return(
-      <div id="boardBody" class="grid-x grid-margin-x">
-        <ul class="grid-x grid-margin-x">
-            
-        </ul>
-        <div class="new-list__button is-idle">
-          <a href="" onClick={this.showForm}>Add a list...</a>
+      <div id="boardBody" className="grid-container full">
+        <div className="cell small-3 small-offset-0">
+          {this.state.newList ? <AddList cancelList={this.cancelList} addList={this.addList} /> : <button className="new-list__button cell small-6" onClick={this.showForm}>Add a list...</button> }   
+        </div>
+        <div className="grid-x grid-margin-x small-offset-2">
+              {this.state.lists.map(
+                (list, index) => (
+                  <List 
+                    key={list}
+                    listTitle={list}
+                  />
+                )
+              )}  
         </div>
       </div>
     );
   }
 }
+
 
 export default BoardBody;

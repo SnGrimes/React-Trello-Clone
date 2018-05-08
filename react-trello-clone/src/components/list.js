@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 
 class List extends Component {
-  constructor(props){
-    super(props);
-    const x = require('../img/x.svg');
-    this.state = {
-      x: x
-    }
-  }
   render() {
     return (
-      <div>This is the lIst component</div>
+      <div className="cell small-3 small-offset-0 list">
+        <h1>{this.props.listTitle}</h1>
+      </div>
     );
   }
 }
