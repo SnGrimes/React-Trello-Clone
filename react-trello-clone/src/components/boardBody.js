@@ -24,7 +24,10 @@ class BoardBody extends Component {
   addList(title) {
     this.setState((prevState) => {
       return {
-        lists: prevState.lists.concat(title)
+        lists: prevState.lists.concat({
+          title: title,
+          cards: []
+        })
       };  
     });
   }
@@ -48,18 +51,19 @@ class BoardBody extends Component {
   render() {
     return(
       <div id="boardBody" className="grid-container full">
-        <div className="cell small-3 small-offset-0">
+        
+        <div className="grid-x grid-margin-x small-offset-0">
+        <div className="cell small-2 small-offset-0">
           {this.state.newList ? <AddList cancelList={this.cancelList} addList={this.addList} /> : <button className="new-list__button cell small-6" onClick={this.showForm}>Add a list...</button> }   
         </div>
-        <div className="grid-x grid-margin-x small-offset-2">
-              {this.state.lists.map(
-                (list, index) => (
-                  <List 
-                    key={list}
-                    listTitle={list}
-                  />
-                )
-              )}  
+        {this.state.lists.map(
+          (list, index) => (
+            <List 
+              key={list.title}
+              listTitle={list.title}
+            />
+          )
+        )}  
         </div>
       </div>
     );

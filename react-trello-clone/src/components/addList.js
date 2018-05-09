@@ -41,7 +41,6 @@ class AddList extends Component {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            <p>A list component</p>
         </form>
       </div>
     );

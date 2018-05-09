@@ -26,7 +26,7 @@ class Header extends Component {
               <li><input type="text" name="search" size="30" className=" header__search-bar"/></li>
           </ul>
         </div>
-          <div className="auto cell text-center"><h2 className="header__title">Trello Clone</h2></div>
+          <div className="auto cell text-center"><h2 className="header__title">Yello</h2></div>
           <div className="top-bar-right">
               <ul className="menu horizontal expanded">
                   <li><button className="button header__buttons"><img src={this.state.plus} alt="plus icon" /></button></li>
