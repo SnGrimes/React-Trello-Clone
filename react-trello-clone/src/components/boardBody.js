@@ -53,7 +53,7 @@ class BoardBody extends Component {
       <div id="boardBody" className="grid-container full">
         
         <div className="grid-x grid-margin-x small-offset-0">
-        <div className="cell small-2 small-offset-0">
+        <div className="cell small-3 small-offset-0">
           {this.state.newList ? <AddList cancelList={this.cancelList} addList={this.addList} /> : <button className="new-list__button cell small-6" onClick={this.showForm}>Add a list...</button> }   
         </div>
         {this.state.lists.map(

@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddList renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AddList
+    addList={[Function]}
+    cancelList={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <form
+        onSubmit={[Function]}
+>
+        <input
+                name="listName"
+                onChange={[Function]}
+                placeholder="Add a list..."
+                size="30"
+                type="text"
+                value=""
+        />
+        <button
+                className="list_button-submit success button small"
+                type="submit"
+        >
+                Save
+        </button>
+        <button
+                className="list_x"
+                onClick={[Function]}
+        >
+                <svg
+                        className="feather feather-x"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                        <line
+                                x1="18"
+                                x2="6"
+                                y1="6"
+                                y2="18"
+                        />
+                        <line
+                                x1="6"
+                                x2="18"
+                                y1="6"
+                                y2="18"
+                        />
+                </svg>
+        </button>
+</form>,
+      "className": "list_add cell small-3",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <input
+            name="listName"
+            onChange={[Function]}
+            placeholder="Add a list..."
+            size="30"
+            type="text"
+            value=""
+/>,
+          <button
+            className="list_button-submit success button small"
+            type="submit"
+>
+            Save
+</button>,
+          <button
+            className="list_x"
+            onClick={[Function]}
+>
+            <svg
+                        className="feather feather-x"
+                        fill="none"
+                        height="24"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+            >
+                        <line
+                                    x1="18"
+                                    x2="6"
+                                    y1="6"
+                                    y2="18"
+                        />
+                        <line
+                                    x1="6"
+                                    x2="18"
+                                    y1="6"
+                                    y2="18"
+                        />
+            </svg>
+</button>,
+        ],
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "name": "listName",
+            "onChange": [Function],
+            "placeholder": "Add a list...",
+            "size": "30",
+            "type": "text",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Save",
+            "className": "list_button-submit success button small",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Save",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <svg
+              className="feather feather-x"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+>
+              <line
+                            x1="18"
+                            x2="6"
+                            y1="6"
+                            y2="18"
+              />
+              <line
+                            x1="6"
+                            x2="18"
+                            y1="6"
+                            y2="18"
+              />
+</svg>,
+            "className": "list_x",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+/>,
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+/>,
+              ],
+              "className": "feather feather-x",
+              "fill": "none",
+              "height": "24",
+              "stroke": "currentColor",
+              "strokeLinecap": "round",
+              "strokeLinejoin": "round",
+              "strokeWidth": "2",
+              "viewBox": "0 0 24 24",
+              "width": "24",
+              "xmlns": "http://www.w3.org/2000/svg",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "x1": "18",
+                  "x2": "6",
+                  "y1": "6",
+                  "y2": "18",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "line",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "x1": "6",
+                  "x2": "18",
+                  "y1": "6",
+                  "y2": "18",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "line",
+              },
+            ],
+            "type": "svg",
+          },
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          onSubmit={[Function]}
+>
+          <input
+                    name="listName"
+                    onChange={[Function]}
+                    placeholder="Add a list..."
+                    size="30"
+                    type="text"
+                    value=""
+          />
+          <button
+                    className="list_button-submit success button small"
+                    type="submit"
+          >
+                    Save
+          </button>
+          <button
+                    className="list_x"
+                    onClick={[Function]}
+          >
+                    <svg
+                              className="feather feather-x"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                    >
+                              <line
+                                        x1="18"
+                                        x2="6"
+                                        y1="6"
+                                        y2="18"
+                              />
+                              <line
+                                        x1="6"
+                                        x2="18"
+                                        y1="6"
+                                        y2="18"
+                              />
+                    </svg>
+          </button>
+</form>,
+        "className": "list_add cell small-3",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              name="listName"
+              onChange={[Function]}
+              placeholder="Add a list..."
+              size="30"
+              type="text"
+              value=""
+/>,
+            <button
+              className="list_button-submit success button small"
+              type="submit"
+>
+              Save
+</button>,
+            <button
+              className="list_x"
+              onClick={[Function]}
+>
+              <svg
+                            className="feather feather-x"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+              >
+                            <line
+                                          x1="18"
+                                          x2="6"
+                                          y1="6"
+                                          y2="18"
+                            />
+                            <line
+                                          x1="6"
+                                          x2="18"
+                                          y1="6"
+                                          y2="18"
+                            />
+              </svg>
+</button>,
+          ],
+          "onSubmit": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "listName",
+              "onChange": [Function],
+              "placeholder": "Add a list...",
+              "size": "30",
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Save",
+              "className": "list_button-submit success button small",
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Save",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <svg
+                className="feather feather-x"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+>
+                <line
+                                x1="18"
+                                x2="6"
+                                y1="6"
+                                y2="18"
+                />
+                <line
+                                x1="6"
+                                x2="18"
+                                y1="6"
+                                y2="18"
+                />
+</svg>,
+              "className": "list_x",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <line
+                    x1="18"
+                    x2="6"
+                    y1="6"
+                    y2="18"
+/>,
+                  <line
+                    x1="6"
+                    x2="18"
+                    y1="6"
+                    y2="18"
+/>,
+                ],
+                "className": "feather feather-x",
+                "fill": "none",
+                "height": "24",
+                "stroke": "currentColor",
+                "strokeLinecap": "round",
+                "strokeLinejoin": "round",
+                "strokeWidth": "2",
+                "viewBox": "0 0 24 24",
+                "width": "24",
+                "xmlns": "http://www.w3.org/2000/svg",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "x1": "18",
+                    "x2": "6",
+                    "y1": "6",
+                    "y2": "18",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "line",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "x1": "6",
+                    "x2": "18",
+                    "y1": "6",
+                    "y2": "18",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "line",
+                },
+              ],
+              "type": "svg",
+            },
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
