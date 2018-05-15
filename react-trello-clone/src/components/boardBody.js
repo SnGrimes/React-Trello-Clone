@@ -25,8 +25,7 @@ class BoardBody extends Component {
     this.setState((prevState) => {
       return {
         lists: prevState.lists.concat({
-          title: title,
-          cards: []
+          title: title
         })
       };  
     });

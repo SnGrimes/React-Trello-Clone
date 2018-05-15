@@ -21,7 +21,7 @@
   background-color: rgba(0,0,0,.50)
 }
 
-.list_add {
+.list__add {
   height: auto;
 }
 
@@ -29,7 +29,7 @@
   height: 100%;
 }
 
-.list, .list_add {
+.list, .list__add {
   background-color: #e2e4e6;
   border: 1px solid #e2e4e6;
   padding: 5px;
@@ -37,14 +37,14 @@
   margin: 0 5px;
 }
 
-.list_add [type='text'] {
+.list__add [type='text'] {
   margin: 0 0 0.5rem;
 }
-.list_add .success.button {
+.list__add .success.button {
   margin: 0 0 0 0;
 }
 
-.list_x {
+.list__x {
   margin: 0 0 0 6px;
   padding-top: 3px;
 }

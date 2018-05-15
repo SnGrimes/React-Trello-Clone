@@ -19,7 +19,7 @@ import AddList from '../components/addList';
     describe('when clicking the `list_button-submit` button', () => {
       const form = addList.find('form');
       beforeEach(() => {
-        addList.find('.list_button-submit').simulate('click');
+        addList.find('.list__button-submit').simulate('click');
       });
       it('calls the onsubmit event', () => {
         form.simulate('submit', { preventDefault() {} });

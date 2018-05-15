@@ -7,12 +7,14 @@ describe('List', () => {
   const props = {key: listTitle, listTitle: listTitle};
   const list = shallow(<List {...props}/>);
   const mockAddCard = jest.fn();
-    jest.mock('../components/list', () => {
+  const mockShowForm = jest.fn();
+  jest.mock('../components/list', () => {
     return jest.fn().mockImplementation(() => {
-    return {addCard : mockAddCard};
+      return {addCard : mockAddCard, showForm: mockShowForm};
+    });
   });
-});
   
+ 
   it('renders correctly', () => {
     expect(list).toMatchSnapshot();
   });
@@ -22,15 +24,18 @@ describe('List', () => {
   it('initializes `state` with an empty card array', () => {
     expect(list.state().cards).toEqual([]);
   });
+  it('initializes `state` with newCard to false', () => {
+    expect(list.state().newCard).toEqual(false);
+  });
   describe('when clicking the `newCard`', () => {
+    const cardDesc = 'This is a card.';
     beforeEach(() => {
       list.find('.list__new-card').simulate('click');      
     });
-    
-    it('calls the `list__new-card` button', () => {
-      expect(mockAddCard).toHaveBeenCalled;
+    it('calls `showForm` function on click', () => {
+      expect(list.state().newCard).toEqual(true);
     });
     
-  });
+  }); // click new card describe block
 
-});
+}); // List component describe block
