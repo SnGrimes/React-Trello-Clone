@@ -42,8 +42,8 @@ class AddCard extends Component {
     return (
       <div>
         <form className="new-card__form" onSubmit={this.createCard}>
-        <input className="new-card__desc-input"type="text" name="cardName" value={this.state.value} onChange={this.handleChange} size="30" />
-        <button className="new-card__button" type="submit">Save</button>
+        <textarea className="new-card__desc-input" name="cardName" value={this.state.value} onChange={this.handleChange} size="30"></textarea>
+        <button className="new-card__button button success small" type="submit">Save</button>
         <button className="new-card__x" onClick={this.cancelAdd}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-x">
               <line x1="18" y1="6" x2="6" y2="18"></line>

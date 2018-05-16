@@ -68,7 +68,7 @@ ShallowWrapper {
                 </svg>
         </button>
 </form>,
-      "className": "list__add cell small-3",
+      "className": "list__add cell small-2",
     },
     "ref": null,
     "rendered": Object {
@@ -313,7 +313,7 @@ ShallowWrapper {
                     </svg>
           </button>
 </form>,
-        "className": "list__add cell small-3",
+        "className": "list__add cell small-2",
       },
       "ref": null,
       "rendered": Object {

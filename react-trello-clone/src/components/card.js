@@ -11,7 +11,9 @@ class Card extends Component {
   }
   render() {
     return (
-      <div></div>
+      <div className="list-card">
+        <h5 className="list-card__title">{this.props.cardTitle}</h5>
+      </div>
     );
   }
 }

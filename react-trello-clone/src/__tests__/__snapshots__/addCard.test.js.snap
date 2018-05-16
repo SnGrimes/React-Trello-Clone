@@ -24,16 +24,15 @@ ShallowWrapper {
         className="new-card__form"
         onSubmit={[Function]}
 >
-        <input
+        <textarea
                 className="new-card__desc-input"
                 name="cardName"
                 onChange={[Function]}
                 size="30"
-                type="text"
                 value=""
         />
         <button
-                className="new-card__button"
+                className="new-card__button button success small"
                 type="submit"
         >
                 Save
@@ -77,16 +76,15 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
+          <textarea
             className="new-card__desc-input"
             name="cardName"
             onChange={[Function]}
             size="30"
-            type="text"
             value=""
 />,
           <button
-            className="new-card__button"
+            className="new-card__button button success small"
             type="submit"
 >
             Save
@@ -136,12 +134,11 @@ ShallowWrapper {
             "name": "cardName",
             "onChange": [Function],
             "size": "30",
-            "type": "text",
             "value": "",
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": "textarea",
         },
         Object {
           "instance": null,
@@ -149,7 +146,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Save",
-            "className": "new-card__button",
+            "className": "new-card__button button success small",
             "type": "submit",
           },
           "ref": null,
@@ -270,16 +267,15 @@ ShallowWrapper {
           className="new-card__form"
           onSubmit={[Function]}
 >
-          <input
+          <textarea
                     className="new-card__desc-input"
                     name="cardName"
                     onChange={[Function]}
                     size="30"
-                    type="text"
                     value=""
           />
           <button
-                    className="new-card__button"
+                    className="new-card__button button success small"
                     type="submit"
           >
                     Save
@@ -323,16 +319,15 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <input
+            <textarea
               className="new-card__desc-input"
               name="cardName"
               onChange={[Function]}
               size="30"
-              type="text"
               value=""
 />,
             <button
-              className="new-card__button"
+              className="new-card__button button success small"
               type="submit"
 >
               Save
@@ -382,12 +377,11 @@ ShallowWrapper {
               "name": "cardName",
               "onChange": [Function],
               "size": "30",
-              "type": "text",
               "value": "",
             },
             "ref": null,
             "rendered": null,
-            "type": "input",
+            "type": "textarea",
           },
           Object {
             "instance": null,
@@ -395,7 +389,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Save",
-              "className": "new-card__button",
+              "className": "new-card__button button success small",
               "type": "submit",
             },
             "ref": null,

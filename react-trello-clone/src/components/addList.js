@@ -40,7 +40,7 @@ class AddList extends Component {
   }
   render() {
     return (
-      <div className="list__add cell small-3">
+      <div className="list__add cell small-2">
         <form  onSubmit={this.createList}>
             <input type="text" name="listName" value={this.state.value} onChange={this.handleChange} size="30" placeholder="Add a list..."/>
             <button className="list__button-submit success button small" type="submit">Save</button>
