@@ -3,6 +3,7 @@ import List from './list';
 import AddList from './addList';
 import './board.css';
 import update from 'immutability-helper';
+import { max_number } from '../helper';
 
 class BoardBody extends Component {
   constructor(props){
@@ -21,12 +22,8 @@ class BoardBody extends Component {
    * on the board.
    * @param {string} name - The name of the List component
    * @param {object} list - The list object
-   * @param {array} cards - The list of cards in this List  
    */
   addList(title) {
-    const max_number = numbers => {
-      return numbers.length > 0 ? Math.max(...numbers) : 0;
-    }
     this.setState((prevState) => {
       return {
         lists: prevState.lists.concat({
@@ -38,15 +35,19 @@ class BoardBody extends Component {
     });
     
   }
+  /**
+   * @function changeListTitle
+   * This function will take the value from the List componenent that is set whenever the user changes the title of a List element.
+   * @param {string} newTitle - The new list title that the user enters
+   * @param {string} oldTitle - The previous list title
+   */
   changeListTitle(newTitle, oldTitle) {
-    console.log(`boardbody: ${oldTitle} and new title: ${newTitle}`);
     function findList(element) {
       return element.title === oldTitle;
     }
+  
     const index = this.state.lists.findIndex(findList);
-    console.log(index);
-    const newLists = update(this.state.lists, {0: {title: {$set: newTitle}}});
-    console.log(`After title update: ${this.state.lists[0].title}`);
+    const newLists = update(this.state.lists, {[index]: {title: {$set: newTitle}}});
     this.setState((prevState) => {
       return {
         lists: newLists
