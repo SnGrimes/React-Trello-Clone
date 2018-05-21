@@ -28,6 +28,9 @@ describe('List', () => {
   it('initializes `state` with newCard to false', () => {
     expect(list.state().newCard).toEqual(false);
   });
+  it('initializes `state` with changeTitle to false', () => {
+    expect(list.state().changeTitle).toEqual(false);
+  });
   describe('when clicking the `newCard`', () => {
     const cardDesc = 'This is a card.';
     beforeEach(() => {
@@ -36,6 +39,15 @@ describe('List', () => {
     it('calls `showForm` function on click', () => {
       expect(list.state().newCard).toEqual(true);
     });
+  // describe('when clicking the list title', () => {
+  //   beforeEach(() => {
+  //     list.find('h5 .list__title').simulate('click');
+  //   });
+    
+  //   it('changes changeTitle in`state` to true', () => {
+  //     expect(list.state().changeTitle).toEqual(true);
+  //   });
+  // }); //changing list title describe block
     
   }); // click new card describe block
 }); // List component describe block

@@ -14,6 +14,7 @@
   padding: 10px;
   border-radius: 4px;
   height: 50px;
+  cursor: pointer;
 }
 
 .new-list__button:hover {
@@ -39,10 +40,19 @@
 .list__title {
   padding:5px;
 }
-.list_button-submit {
-  position: relative;
-  top: 4px;
+
+textarea.list__title-edit {
+  resize: none;
+  height: 20px;
+  max-width: 82%;
+  min-height: 40px;
+  margin: 2px 2px 0 2px;
 }
+
+textarea.list__title-edit:focus {
+  box-shadow: 0px 0px 4px #0284c6;
+}
+
 .list__add [type='text'] {
   margin: 0 0 0.5rem;
 }
@@ -59,6 +69,7 @@
   color: black;
   width: 100%;
   text-align: left;
+  cursor: pointer;
 }
 .list__new-card_button:hover {
   background-color: #cdd2d4;
@@ -96,4 +107,10 @@
 }
 .new-card__button {
   margin: 0 4px 4px 4px;
+}
+svg{
+  stroke: #999;
+}
+svg:hover {
+  stroke: black;
 }

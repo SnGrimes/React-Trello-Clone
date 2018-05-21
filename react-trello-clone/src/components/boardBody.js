@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import List from './list';
 import AddList from './addList';
 import './board.css';
+import update from 'immutability-helper';
 
 class BoardBody extends Component {
   constructor(props){
@@ -9,6 +10,7 @@ class BoardBody extends Component {
     this.addList = this.addList.bind(this);
     this.showForm = this.showForm.bind(this);
     this.cancelList = this.cancelList.bind(this);
+    this.changeListTitle = this.changeListTitle.bind(this);
     this.state = {
       lists: [],
       newList: false
@@ -22,15 +24,34 @@ class BoardBody extends Component {
    * @param {array} cards - The list of cards in this List  
    */
   addList(title) {
+    const max_number = numbers => {
+      return numbers.length > 0 ? Math.max(...numbers) : 0;
+    }
     this.setState((prevState) => {
       return {
         lists: prevState.lists.concat({
+          id: max_number(this.state.lists.map(list => list.id)) +1,
           title: title
         }),
         newList: false
       };  
     });
     
+  }
+  changeListTitle(newTitle, oldTitle) {
+    console.log(`boardbody: ${oldTitle} and new title: ${newTitle}`);
+    function findList(element) {
+      return element.title === oldTitle;
+    }
+    const index = this.state.lists.findIndex(findList);
+    console.log(index);
+    const newLists = update(this.state.lists, {0: {title: {$set: newTitle}}});
+    console.log(`After title update: ${this.state.lists[0].title}`);
+    this.setState((prevState) => {
+      return {
+        lists: newLists
+      }
+    });
   }
   /**
    * 
@@ -57,8 +78,9 @@ class BoardBody extends Component {
           {this.state.lists.map(
             (list, index) => (
               <List 
-                key={list.title}
+                key={list.id}
                 listTitle={list.title}
+                changeListTitle={this.changeListTitle}
               />
             )
           )}

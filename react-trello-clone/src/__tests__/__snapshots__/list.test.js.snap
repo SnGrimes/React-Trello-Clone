@@ -25,17 +25,17 @@ ShallowWrapper {
 >
           <h5
                     className="list__title cell auto"
+                    onClick={[Function]}
           >
                     Test1
           </h5>
           <button
-                    className="cell small-2"
+                    className="cell small-2 button clear"
           >
                     <svg
                               className="feather feather-more-horizontal"
                               fill="none"
                               height="15"
-                              stroke="currentColor"
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth="2"
@@ -85,17 +85,17 @@ ShallowWrapper {
           "children": Array [
             <h5
               className="list__title cell auto"
+              onClick={[Function]}
 >
               Test1
 </h5>,
             <button
-              className="cell small-2"
+              className="cell small-2 button clear"
 >
               <svg
                             className="feather feather-more-horizontal"
                             fill="none"
                             height="15"
-                            stroke="currentColor"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
@@ -132,6 +132,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Test1",
               "className": "list__title cell auto",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Test1",
@@ -146,7 +147,6 @@ ShallowWrapper {
                 className="feather feather-more-horizontal"
                 fill="none"
                 height="15"
-                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -170,7 +170,7 @@ ShallowWrapper {
                                 r="1"
                 />
 </svg>,
-              "className": "cell small-2",
+              "className": "cell small-2 button clear",
             },
             "ref": null,
             "rendered": Object {
@@ -198,7 +198,6 @@ ShallowWrapper {
                 "className": "feather feather-more-horizontal",
                 "fill": "none",
                 "height": "15",
-                "stroke": "currentColor",
                 "strokeLinecap": "round",
                 "strokeLinejoin": "round",
                 "strokeWidth": "2",
@@ -299,17 +298,17 @@ ShallowWrapper {
 >
             <h5
                         className="list__title cell auto"
+                        onClick={[Function]}
             >
                         Test1
             </h5>
             <button
-                        className="cell small-2"
+                        className="cell small-2 button clear"
             >
                         <svg
                                     className="feather feather-more-horizontal"
                                     fill="none"
                                     height="15"
-                                    stroke="currentColor"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="2"
@@ -359,17 +358,17 @@ ShallowWrapper {
             "children": Array [
               <h5
                 className="list__title cell auto"
+                onClick={[Function]}
 >
                 Test1
 </h5>,
               <button
-                className="cell small-2"
+                className="cell small-2 button clear"
 >
                 <svg
                                 className="feather feather-more-horizontal"
                                 fill="none"
                                 height="15"
-                                stroke="currentColor"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
@@ -406,6 +405,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Test1",
                 "className": "list__title cell auto",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "Test1",
@@ -420,7 +420,6 @@ ShallowWrapper {
                   className="feather feather-more-horizontal"
                   fill="none"
                   height="15"
-                  stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
@@ -444,7 +443,7 @@ ShallowWrapper {
                                     r="1"
                   />
 </svg>,
-                "className": "cell small-2",
+                "className": "cell small-2 button clear",
               },
               "ref": null,
               "rendered": Object {
@@ -472,7 +471,6 @@ ShallowWrapper {
                   "className": "feather feather-more-horizontal",
                   "fill": "none",
                   "height": "15",
-                  "stroke": "currentColor",
                   "strokeLinecap": "round",
                   "strokeLinejoin": "round",
                   "strokeWidth": "2",
