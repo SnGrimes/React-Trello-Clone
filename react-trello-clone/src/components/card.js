@@ -13,6 +13,7 @@ class Card extends Component {
     return (
       <div className="list-card">
         <h5 className="list-card__title">{this.props.cardTitle}</h5>
+        <p>(id:{this.props.id})</p>
       </div>
     );
   }

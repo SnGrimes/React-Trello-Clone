@@ -88,6 +88,8 @@ class List extends Component {
             <Card
               key={card.id}
               cardTitle={card.description}
+              id={card.id}
+              removeCard ={this.removeCard}
             />
           )
         )}
