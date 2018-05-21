@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddList renders correctly 1`] = `
+exports[`addCard renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AddList
-    addList={[Function]}
-    cancelList={[Function]}
+  Symbol(enzyme.__unrendered__): <AddCard
+    addCard={[Function]}
+    cancelCard={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -21,24 +21,24 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <form
+        className="new-card__form"
         onSubmit={[Function]}
 >
-        <input
-                name="listName"
+        <textarea
+                className="new-card__desc-input"
+                name="cardName"
                 onChange={[Function]}
-                placeholder="Add a list..."
                 size="30"
-                type="text"
                 value=""
         />
         <button
-                className="list__button-submit success button small"
+                className="new-card__button button success small"
                 type="submit"
         >
                 Save
         </button>
         <button
-                className="list__x"
+                className="new-card__x"
                 onClick={[Function]}
         >
                 <svg
@@ -68,7 +68,6 @@ ShallowWrapper {
                 </svg>
         </button>
 </form>,
-      "className": "list__add cell small-2",
     },
     "ref": null,
     "rendered": Object {
@@ -77,22 +76,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            name="listName"
+          <textarea
+            className="new-card__desc-input"
+            name="cardName"
             onChange={[Function]}
-            placeholder="Add a list..."
             size="30"
-            type="text"
             value=""
 />,
           <button
-            className="list__button-submit success button small"
+            className="new-card__button button success small"
             type="submit"
 >
             Save
 </button>,
           <button
-            className="list__x"
+            className="new-card__x"
             onClick={[Function]}
 >
             <svg
@@ -122,6 +120,7 @@ ShallowWrapper {
             </svg>
 </button>,
         ],
+        "className": "new-card__form",
         "onSubmit": [Function],
       },
       "ref": null,
@@ -131,16 +130,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "name": "listName",
+            "className": "new-card__desc-input",
+            "name": "cardName",
             "onChange": [Function],
-            "placeholder": "Add a list...",
             "size": "30",
-            "type": "text",
             "value": "",
           },
           "ref": null,
           "rendered": null,
-          "type": "input",
+          "type": "textarea",
         },
         Object {
           "instance": null,
@@ -148,7 +146,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Save",
-            "className": "list__button-submit success button small",
+            "className": "new-card__button button success small",
             "type": "submit",
           },
           "ref": null,
@@ -185,7 +183,7 @@ ShallowWrapper {
                             y2="18"
               />
 </svg>,
-            "className": "list__x",
+            "className": "new-card__x",
             "onClick": [Function],
           },
           "ref": null,
@@ -266,24 +264,24 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <form
+          className="new-card__form"
           onSubmit={[Function]}
 >
-          <input
-                    name="listName"
+          <textarea
+                    className="new-card__desc-input"
+                    name="cardName"
                     onChange={[Function]}
-                    placeholder="Add a list..."
                     size="30"
-                    type="text"
                     value=""
           />
           <button
-                    className="list__button-submit success button small"
+                    className="new-card__button button success small"
                     type="submit"
           >
                     Save
           </button>
           <button
-                    className="list__x"
+                    className="new-card__x"
                     onClick={[Function]}
           >
                     <svg
@@ -313,7 +311,6 @@ ShallowWrapper {
                     </svg>
           </button>
 </form>,
-        "className": "list__add cell small-2",
       },
       "ref": null,
       "rendered": Object {
@@ -322,22 +319,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <input
-              name="listName"
+            <textarea
+              className="new-card__desc-input"
+              name="cardName"
               onChange={[Function]}
-              placeholder="Add a list..."
               size="30"
-              type="text"
               value=""
 />,
             <button
-              className="list__button-submit success button small"
+              className="new-card__button button success small"
               type="submit"
 >
               Save
 </button>,
             <button
-              className="list__x"
+              className="new-card__x"
               onClick={[Function]}
 >
               <svg
@@ -367,6 +363,7 @@ ShallowWrapper {
               </svg>
 </button>,
           ],
+          "className": "new-card__form",
           "onSubmit": [Function],
         },
         "ref": null,
@@ -376,16 +373,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "name": "listName",
+              "className": "new-card__desc-input",
+              "name": "cardName",
               "onChange": [Function],
-              "placeholder": "Add a list...",
               "size": "30",
-              "type": "text",
               "value": "",
             },
             "ref": null,
             "rendered": null,
-            "type": "input",
+            "type": "textarea",
           },
           Object {
             "instance": null,
@@ -393,7 +389,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Save",
-              "className": "list__button-submit success button small",
+              "className": "new-card__button button success small",
               "type": "submit",
             },
             "ref": null,
@@ -430,7 +426,7 @@ ShallowWrapper {
                                 y2="18"
                 />
 </svg>,
-              "className": "list__x",
+              "className": "new-card__x",
               "onClick": [Function],
             },
             "ref": null,

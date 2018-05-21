@@ -13,38 +13,104 @@
   background-color: rgba(0,0,0,.30);
   padding: 10px;
   border-radius: 4px;
-  margin: 0 5px;
   height: 50px;
+  cursor: pointer;
 }
 
 .new-list__button:hover {
   background-color: rgba(0,0,0,.50)
 }
 
-.list_add {
+.list__add {
   height: auto;
+  padding: 5px;
 }
 
 .list {
   height: 100%;
+  color: black;
 }
 
-.list, .list_add {
+.list, .list__add {
   background-color: #e2e4e6;
   border: 1px solid #e2e4e6;
-  padding: 5px;
   border-radius: 3px;
   margin: 0 5px;
 }
+.list__title {
+  padding:5px;
+}
 
-.list_add [type='text'] {
+textarea.list__title-edit {
+  resize: none;
+  height: 20px;
+  max-width: 82%;
+  min-height: 40px;
+  margin: 2px 2px 0 2px;
+}
+
+textarea.list__title-edit:focus {
+  box-shadow: 0px 0px 4px #0284c6;
+}
+
+.list__add [type='text'] {
   margin: 0 0 0.5rem;
 }
-.list_add .success.button {
-  margin: 0 0 0 0;
+.list__add .success.button {
+  margin: 0 4px 0 0;
+}
+.list__new-card_button {
+  padding: 5px;
+  max-width: 300px;
+  margin: 0px;
+  position: relative;
+  display: block;
+  border-radius: 0 0 3px 3px;
+  color: black;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.list__new-card_button:hover {
+  background-color: #cdd2d4;
+  color: black;
+}
+.list__x, .new-card__x  {
+  position: relative;
+  top: 4px;
 }
 
-.list_x {
-  margin: 0 0 0 6px;
-  padding-top: 3px;
+.list-card {
+  background-color: #fff;
+  padding: 8px 10px;
+  max-width: 300px;
+  cursor: pointer;
+  border-radius: 3px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 5px 6px 5px;
+}
+
+.list-card__title {
+  color: black;
+}
+
+.new-card__desc-input {
+  margin: 0 0 4px 4px;
+  max-height: 150px;
+  min-height: 55px;
+  width: 95%;
+  padding: 0;
+  cursor: text;
+  word-wrap: break-word;
+  resize: none;
+  overflow: hidden;
+}
+.new-card__button {
+  margin: 0 4px 4px 4px;
+}
+svg{
+  stroke: #999;
+}
+svg:hover {
+  stroke: black;
 }
