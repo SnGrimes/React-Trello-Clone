@@ -18,6 +18,24 @@ class List extends Component {
       newTitle: ''
     }
   }
+
+  componentDidMount () {
+    if(!localStorage.getItem('Cards')) {
+      console.log('New visitor');
+    }
+    else {
+      let previous = JSON.parse(localStorage.getItem('Cards'));
+      this.setState((prevState) => {
+        return {
+          cards:previous
+        };
+      });
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('Cards', JSON.stringify(this.state.cards));
+  }
   /**
    * @function addCard
    * @param {string} description - description/name of the card 
