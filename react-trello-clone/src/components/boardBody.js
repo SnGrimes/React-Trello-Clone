@@ -101,6 +101,7 @@ class BoardBody extends Component {
                 key={list.id}
                 listTitle={list.title}
                 changeListTitle={this.changeListTitle}
+                id={list.id}
               />
             )
           )}
