@@ -12,11 +12,11 @@ class Card extends Component {
   }
   render() {
     return (
-      <div className="list-card">
+      <button className="list-card" onClick={this.props.openModal}>
         <h5 className="list-card__title">{this.props.cardTitle}</h5>
         <p>(id:{this.props.id})</p>
         <p>(list id:{this.props.listId})</p>
-      </div>
+      </button>
     );
   }
 }
