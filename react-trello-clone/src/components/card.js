@@ -6,7 +6,8 @@ class Card extends Component {
     this.state = {
       desc: '',
       labels: [],
-      icons: []
+      icons: [],
+      listId: this.props.listId
     }
   }
   render() {
@@ -14,6 +15,7 @@ class Card extends Component {
       <div className="list-card">
         <h5 className="list-card__title">{this.props.cardTitle}</h5>
         <p>(id:{this.props.id})</p>
+        <p>(list id:{this.props.listId})</p>
       </div>
     );
   }

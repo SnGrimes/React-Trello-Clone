@@ -18,6 +18,27 @@ class List extends Component {
       newTitle: ''
     }
   }
+
+  componentDidMount () {
+    const data = 'Cards' + this.props.id;
+    if(!localStorage.getItem(data)) {
+      console.log('New visitor');
+    }
+    else {
+      let previous = JSON.parse(localStorage.getItem(data));
+      console.log(previous);
+      this.setState((prevState) => {
+        return {
+          cards:previous
+        };
+      });
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('Cards' + this.props.id, JSON.stringify(this.state.cards));
+  }
+ 
   /**
    * @function addCard
    * @param {string} description - description/name of the card 
@@ -28,11 +49,14 @@ class List extends Component {
       return {
         cards: prevState.cards.concat({
           id: max_number(this.state.cards.map(card => card.id)) +1,
-          description: description
+          description: description,
+          listId: this.props.id
         }),
         newCard: false
       }
     });
+    //console.log(`From add Card on List ${this.state.cards.id}`);
+    //this.props.getCards(this.state.cards,this.props.id);
   }
   /**
    * @function cancelCard
@@ -89,6 +113,7 @@ class List extends Component {
               key={card.id}
               cardTitle={card.description}
               id={card.id}
+              listId={this.props.id}
               removeCard ={this.removeCard}
             />
           )

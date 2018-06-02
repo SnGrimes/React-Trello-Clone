@@ -5,6 +5,8 @@ import './board.css';
 import update from 'immutability-helper';
 import { max_number } from '../helper';
 
+
+
 class BoardBody extends Component {
   constructor(props){
     super(props);
@@ -17,6 +19,23 @@ class BoardBody extends Component {
       newList: false
     }
   }
+
+  componentDidMount () {
+    if(!localStorage.getItem('Lists')) {
+      console.log('New visitor');
+    } else {
+      let previous = JSON.parse(localStorage.getItem('Lists'));
+      this.setState((prevState) => {
+        return {
+          lists: previous
+        };
+      });
+    }
+  }
+  componentDidUpdate() {
+    localStorage.setItem('Lists', JSON.stringify(this.state.lists));
+  }
+
   /** @function addList
    * Function to add a new list object to the array of objects that is displayed
    * on the board.
@@ -33,7 +52,7 @@ class BoardBody extends Component {
         newList: false
       };  
     });
-    
+
   }
   /**
    * @function changeListTitle
@@ -82,6 +101,7 @@ class BoardBody extends Component {
                 key={list.id}
                 listTitle={list.title}
                 changeListTitle={this.changeListTitle}
+                id={list.id}
               />
             )
           )}
