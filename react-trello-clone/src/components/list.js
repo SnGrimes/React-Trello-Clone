@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
 import AddCard from './addCard';
 import Card from './card';
-import Modal from 'react-modal';
 import { max_number } from '../helper';
 
-const modalStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    color: '#000'
-  }
-};
-Modal.setAppElement('#root');
+
 
 class List extends Component {
   constructor(props){
@@ -25,29 +13,14 @@ class List extends Component {
     this.cancelCard = this.cancelCard.bind(this);
     this.titleClick = this.titleClick.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModa = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
     this.state = {
       cards: [],
       newCard: false,
       changeTitle: false,
-      newTitle: '',
-      modalIsOpen: false
+      newTitle: ''
     }
   }
 
-  openModal(){
-    this.setState({modalIsOpen: true});
-  }
-
-  afterOpenModal() {
-    
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
 
   componentDidMount () {
     const data = 'Cards' + this.props.id;
@@ -136,18 +109,7 @@ class List extends Component {
               <circle cx="5" cy="12" r="1"></circle>
             </svg>
           </button>
-        </div>
-        
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel="Card Modal"
-          style={modalStyles}
-        >
-        <h2>Card Body</h2>
-        <div>Description: </div>
-        </Modal>
-        
+        </div>        
         {this.state.cards.map(
           (card, index) => (
             <Card
