@@ -26,36 +26,39 @@ class Card extends Component {
       labels: [],
       icons: [],
       listId: this.props.listId,
-      IsOpen: false
+      modalIsOpen: false
     }
   }
 
   openModal(){
-    this.setState({IsOpen: true});
+    this.setState({modalIsOpen: true});
   }
   
   closeModal() {
-    this.setState({IsOpen: false});
+    this.setState({modalIsOpen: false});
     console.log(`Closing the modal...`);
   }
   render() {
     return (
-      <button className="list-card" onClick={this.openModal}>
+      <div className="list-card" >
+      <button className="list-card__button" onClick={this.openModal}>
+        <h5 className="list-card__title">{this.props.cardTitle}</h5>
+        <p>(id:{this.props.id})</p>
+        <p>(list id:{this.props.listId})</p>
+      </button>
          <Modal
-          isOpen={this.state.IsOpen}
+          isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           contentLabel="Card Modal"
           style={modalStyles}
+          shouldCloseOnOverlayClick={true}
           closeTimeoutMS={200}
         >
         <h2>Card Body</h2>
         <button className="button" onClick={this.closeModal}>Close</button>
         <div>Description: </div>
         </Modal>
-        <h5 className="list-card__title">{this.props.cardTitle}</h5>
-        <p>(id:{this.props.id})</p>
-        <p>(list id:{this.props.listId})</p>
-      </button>
+      </div>
     );
   }
 }

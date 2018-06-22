@@ -90,6 +90,11 @@ textarea.list__title-edit:focus {
   margin: 0 5px 6px 5px;
 }
 
+.list-card__button {
+  width: 100%;
+  text-align: justify;
+}
+
 .list-card__title {
   color: black;
 }
