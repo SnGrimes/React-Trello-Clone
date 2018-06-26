@@ -30,6 +30,7 @@ class Card extends Component {
     this.titleClick = this.titleClick.bind(this);
     this.descClick = this.descClick.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.changeTitle = this.changeTitle.bind(this);
     this.state = {
       desc: '',
       labels: [],
@@ -68,8 +69,20 @@ class Card extends Component {
   cancelDescChange() {
     this.setState({changeDesc:false});
   }
+  /**
+   * @function handleTitleChange
+   * @param {event} 
+   * This function will be called by the onChange handler to set the value of the card's newTitle
+   * to the users new Card title/description. It will then call the props.changeCardTitle to change
+   * the Card element's title/description on the List component
+   */
   handleTitleChange(event) {
-    this.props.changeCardTitle(this.state.newDesc, this.state.desc);
+    this.setState({newTitle: event.target.value});
+    this.props.changeCardTitle(this.state.newTitle, this.props.cardTitle);
+  }
+  changeTitle(event) {
+    event.preventDefault();
+    this.setState({changeTitle: false});
   }
   /**
    * @function titleClick
@@ -117,12 +130,14 @@ class Card extends Component {
         >
         <div className="grid-y card-modal">
           <div className="cell grid-x">
-            <h2 className="cell small-4 medium-12 large-11"><span>Icon</span>{this.props.cardTitle}</h2>
+            {this.state.changeTitle ?  <textarea onBlur={this.titleClick} onChange={this.handleTitleChange} maxLength="100" defaultValue={this.props.cardTitle}></textarea>
+            :
+            <h5 className="cell small-4 medium-12 large-11" onClick={this.titleClick}><span>Icon</span>{this.props.cardTitle}</h5>}
             <button className="button clear cell small-1" onClick={this.closeModal}>X</button>
 
           </div>
           <div className="cell medium-6">
-            <p>in list <a className="card-modal__link" href="#">{this.props.listTitle}</a></p>  
+            <p>in list <a className="card-modal__link" href='# '>{this.props.listTitle}</a></p>  
           </div>
           <div className="cell small-4 medium-8 large-6 grid-x grid-margin-x">
             <div className="cell small-6 medium-8 large-9">
@@ -142,9 +157,9 @@ class Card extends Component {
                   :
                   <textarea cols="80" rows="5" placeholder="Add a more detailed description..." defaultValue={this.state.desc} onClick={this.descClick}></textarea> }
               </div>
-              <div className="cell"><h5>Attachments</h5><div className="card-modal__attach">Drag and drop or <a className="card-modal__link" href="#">choose your files</a></div></div>
+              <div className="cell"><h5>Attachments</h5><div className="card-modal__attach">Drag and drop or <a className="card-modal__link" href='# '>choose your files</a></div></div>
               <div className="cell"><h5>Add Comment</h5><textarea name="" id="" cols="80" rows="5"></textarea><button className="button">Save</button></div>
-              <div className="cell grid-x"><h5 className="cell medium-10">Activity</h5><a className="card-modal__link" href="#">Hide Details</a></div>
+              <div className="cell grid-x"><h5 className="cell medium-10">Activity</h5><a className="card-modal__link" href='# '>Hide Details</a></div>
             </div>
             <div className="cell small-2 medium-3 grid-y card-modal__side-buttons">
               <h5>Add</h5>

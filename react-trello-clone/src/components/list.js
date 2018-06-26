@@ -14,6 +14,7 @@ class List extends Component {
     this.cancelCard = this.cancelCard.bind(this);
     this.titleClick = this.titleClick.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.changeCardTitle = this.changeCardTitle.bind(this);
     this.state = {
       cards: [],
       newCard: false,
@@ -31,7 +32,7 @@ class List extends Component {
     else {
       let previous = JSON.parse(localStorage.getItem(data));
       console.log(previous);
-      this.setState((prevState) => {
+      this.setState(() => {
         return {
           cards:previous
         };
@@ -86,17 +87,16 @@ class List extends Component {
    * @function changeCardTitle
    * This function will take the value from the Card component that is set when the user changes
    * the card description and update the card's title in the list component
-   * @param {string} newTitle - The new card title that the user enters
-   * @param {string} oldTitle - The previous card title 
+   * @param {string} newDescription - The new card title that the user enters
+   * @param {string} oldDescription - The previous card title 
    */
 
-  changeCardTitle(newTitle, oldTitle) {
+  changeCardTitle(newDescription, oldDescription) {
     function findCard(element) {
-      return element.title === oldTitle;
+      return element.description === oldDescription;
     }
-
-    const index = this.state.cards.findIndex(findCard);
-    const newCards = update(this.state.cards, {[index]: {title: {$set: newTitle}}});
+    const index = this.state.cards.findIndex(findCard);    
+    const newCards = update(this.state.cards, {[index]: {description: {$set: newDescription}}});
     this.setState(() => {
       return {
         cards: newCards
@@ -106,7 +106,9 @@ class List extends Component {
   /**
    * @function handleTitleChange
    * @param {event} 
-   * This function will be called by the onChange handler to set the value of the newTitle state to the users new List title. It will then call the props.changeListTitle to change the List element's title on the boardBody compoenent
+   * This function will be called by the onChange handler to set the value of the 
+   * newTitle state to the users new List title. It will then call the props.changeListTitle 
+   * to change the List element's title on the boardBody component
    */
   handleTitleChange(event) {
     this.setState({newTitle: event.target.value});
@@ -140,7 +142,7 @@ class List extends Component {
           </button>
         </div>        
         {this.state.cards.map(
-          (card, index) => (
+          (card) => (
             <Card
               key={card.id}
               cardTitle={card.description}

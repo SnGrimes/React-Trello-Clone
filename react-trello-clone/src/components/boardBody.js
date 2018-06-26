@@ -67,7 +67,7 @@ class BoardBody extends Component {
   
     const index = this.state.lists.findIndex(findList);
     const newLists = update(this.state.lists, {[index]: {title: {$set: newTitle}}});
-    this.setState((prevState) => {
+    this.setState(() => {
       return {
         lists: newLists
       }
@@ -96,7 +96,7 @@ class BoardBody extends Component {
         
         <div className="grid-x grid-margin-x small-offset-0">
           {this.state.lists.map(
-            (list, index) => (
+            (list) => (
               <List 
                 key={list.id}
                 listTitle={list.title}
