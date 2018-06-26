@@ -1,0 +1,24 @@
+.card-modal textarea {
+  resize:none;
+}
+
+.card-modal__link {
+  color: black;
+  text-decoration-line: underline;
+}
+
+.card-modal__link:hover {
+  color: grey;
+}
+.card-modal__attach {
+  border: 2px dashed #c4c9cc;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-modal__side-buttons > button {
+  margin: 0 0 .5rem 0;
+  background-color: #e2e4e6;
+  color: black;
+  box-shadow: 0 1px 0 0 #c4c9cc;
+}

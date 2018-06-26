@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddCard from './addCard';
 import Card from './card';
+import update from 'immutability-helper';
 import { max_number } from '../helper';
 
 
@@ -71,12 +72,34 @@ class List extends Component {
   }
   /**
    * @function titleClick
-   * This function will toggle the changeTitle state to true/false which will cause the list__title textarea to appear so the user can change the title of the list.
+   * This function will toggle the changeTitle state to true/false which will cause the 
+   * list__title textarea to appear so the user can change the title of the list.
    */
   titleClick() {
     this.setState((prevState) => {
       return {
         changeTitle: !prevState.changeTitle
+      }
+    });
+  }
+  /**
+   * @function changeCardTitle
+   * This function will take the value from the Card component that is set when the user changes
+   * the card description and update the card's title in the list component
+   * @param {string} newTitle - The new card title that the user enters
+   * @param {string} oldTitle - The previous card title 
+   */
+
+  changeCardTitle(newTitle, oldTitle) {
+    function findCard(element) {
+      return element.title === oldTitle;
+    }
+
+    const index = this.state.cards.findIndex(findCard);
+    const newCards = update(this.state.cards, {[index]: {title: {$set: newTitle}}});
+    this.setState(() => {
+      return {
+        cards: newCards
       }
     });
   }
@@ -89,6 +112,12 @@ class List extends Component {
     this.setState({newTitle: event.target.value});
     this.props.changeListTitle(this.state.newTitle, this.props.listTitle);
   }
+
+  /**
+   * @function showForm
+   * This function will toggle the newCard boolean that controls whether to show the
+   * new card form or not.
+   */
 
   showForm() {
     this.setState((prevState) => {
@@ -117,8 +146,9 @@ class List extends Component {
               cardTitle={card.description}
               id={card.id}
               listId={this.props.id}
-              removeCard={this.removeCard}
               openModal={this.openModal}
+              listTitle={this.props.listTitle}
+              changeCardTitle={this.changeCardTitle}
             />
           )
         )}
